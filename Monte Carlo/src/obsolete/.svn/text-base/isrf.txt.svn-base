@@ -1,0 +1,8 @@
+      integer nisrf
+      parameter(nisrf=200)
+
+      real*8 pdf_i(nisrf),cdf_i(nisrf),freq_i(nisrf)
+     $  ,logfreq_i(nisrf),logcdf_i(nisrf),nupdf_i(nisrf)
+
+      common /isrf/ pdf_i,cdf_i,freq_i
+     $  ,logfreq_i,logcdf_i,nupdf_i

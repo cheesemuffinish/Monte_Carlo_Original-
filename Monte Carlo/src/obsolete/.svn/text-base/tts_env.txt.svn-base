@@ -1,0 +1,52 @@
+c	tts.txt
+
+       integer nxhst,nx,nmu,nfreq,nbnd
+
+       parameter(nxhst=149,nx=9,nmu=11,nfreq=50,nbnd=10)
+
+      real*8 image(nx,nx,nmu),si(nfreq,nmu,3),sq(nfreq,nmu,3)
+     1 ,su(nfreq,nmu,3),sv(nfreq,nmu,3),spi(nfreq,nmu,3)
+     1 ,spq(nfreq,nmu,3),spu(nfreq,nmu,3),spv(nfreq,nmu,3)
+     1 ,si2(nfreq,nmu,3),sq2(nfreq,nmu,3),su2(nfreq,nmu,3)
+     1 ,sv2(nfreq,nmu,3)
+     1 ,star(nfreq,nmu),tauenv(nfreq,nmu)
+     1 ,imagei(nx,nx,nmu),imageq(nx,nx,nmu)
+     1 ,imageu(nx,nx,nmu),imagev(nx,nx,nmu),image2(nx,nx,nmu)
+     1 ,tihst(nxhst,nxhst,nbnd),tqhst(nxhst,nxhst,nbnd)
+     1 ,tuhst(nxhst,nxhst,nbnd),tvhst(nxhst,nxhst,nbnd)
+     1 ,ti(nfreq,3),tq(nfreq,3),tu(nfreq,3),tv(nfreq,3)
+     1 ,tis(nfreq,3),tqs(nfreq,3),tus(nfreq,3),tvs(nfreq,3)
+     1 ,ti2(nfreq,3),tq2(nfreq,3),tu2(nfreq,3),tv2(nfreq,3)
+
+      real*8 u(nmu),aperture(3)
+     1 ,nscat,tot,zmax,rmax,a,c0,lp,abflux
+     1 ,rmin,rmind,rddust,z1,b,zmin,flux,xmaxp
+     1 ,rsol,sflux,aflux,cosb,sinb,rlam,rmaxd,rmaxi
+     1 ,rpolbeam,dmu,dmuhalf,thetmu0,autors,rstar,wave
+     1 ,tstar,normstar,thete,phie,coste,sinte,cospe,sinpe
+     1 ,sfactor,fractxh,rhod0,numax,numin,lnurat,nunorm
+     1 ,nurat,nub
+
+        integer nums(nfreq,nmu,3),numt(nfreq,3),numi(nx,nx,nmu)
+     1 ,np,npout,npsav,limb,occult,nfinei,nfined 
+     1 ,nri,nzi,iwrite,isot,itherm,ipeel,ispot
+
+      common /p1/ image
+     1 ,si,sq,su,sv,spi,spq,spu,spv
+     1 ,si2,sq2,su2,sv2
+     1 ,star,tauenv
+     1 ,imagei,imageq,imageu,imagev,image2
+     1 ,tihst,tqhst,tuhst,tvhst
+     1 ,ti,tq,tu,tv
+     1 ,tis,tqs,tus,tvs
+     1 ,ti2,tq2,tu2,tv2
+     1 ,u,aperture
+     1 ,nscat,tot,zmax,rmax,a,c0,lp,abflux
+     1 ,rmin,rmind,rddust,z1,b,zmin,flux,xmaxp
+     1 ,rsol,sflux,aflux,cosb,sinb,rlam,rmaxd,rmaxi
+     1 ,rpolbeam,dmu,dmuhalf,thetmu0,autors,rstar,wave
+     1 ,tstar,normstar,thete,phie,coste,sinte,cospe,sinpe
+     1 ,sfactor,fractxh,rhod0,numax,numin,lnurat,nunorm
+     1 ,nurat,nub,nums,numt,numi
+     1 ,np,npout,npsav,limb,occult,nfinei
+     1 ,nfined,nri,nzi,iwrite,isot,itherm,ipeel,ispot

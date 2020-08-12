@@ -1,0 +1,20 @@
+add working copy to tmp directory.  name it hochunk3d_[date]
+
+cd hochunk3d_[date]
+./release.csh
+
+rm BARB*
+
+in tmp directory
+tar cvfz hochunk3d_[date].tgz hochunk3d_[date]
+
+scp hochunk3d_[date].tgz gemelli.spacescience.org:/data/home/gemelli/bwhitney/public_html/codes
+
+cd into hochunk3d_[date] directory
+
+scp Changes.hochunk3d gemelli.spacescience.org:/data/home/gemelli/bwhitney/public_html/codes
+
+on gemelli.spacescience.org
+cd into public_html/codes
+edit index.html to reflect changes.  then copy to codes.html
+

@@ -1,0 +1,7 @@
+c	therm.txt
+
+	integer nfreq
+
+	parameter (nfreq=50)
+
+	real 

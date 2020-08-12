@@ -1,0 +1,14 @@
+c     filt.txt
+
+      integer nwfiltmax,nfilt
+
+      parameter(nwfiltmax=2000,nfilt=20)
+
+      real*8 filtphi(nwfiltmax,nfilt),filtwave(nwfiltmax,nfilt)
+
+      integer nwfilt(nfilt)
+
+      character filtnames(nfilt)*6
+
+      common /filter/ filtphi,filtwave,nwfilt,filtnames
+

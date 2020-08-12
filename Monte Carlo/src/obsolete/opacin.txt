@@ -1,0 +1,16 @@
+c	opacin.txt
+
+      real*8 kapd(4),rate
+     1 ,opb,iopb,massc,rc,rchole,msol,rmine,ex1,z01,rhoconst1
+     1 ,exf,thet1,ex2,z02,rhoconst2,thet2,zflowmin,zbub1,zbub2,nbub
+     1 ,buboa,windmu0,rhoe0,c1e,c2e,cosbuboa,rhoamb,rminsq
+     1 ,xymaxdens,rmine_in,rmind_in,rmine2,fracte
+
+      integer ihole,ipoly,istream,ibub
+
+      common /opi/ kapd,rate
+     1 ,opb,iopb,massc,rc,rchole,msol,rmine,ex1,z01,rhoconst1
+     1 ,exf,thet1,ex2,z02,rhoconst2,thet2,zflowmin,zbub1,zbub2,nbub
+     1 ,buboa,windmu0,rhoe0,c1e,c2e,cosbuboa,rhoamb,rminsq
+     1 ,xymaxdens,rmine_in,rmind_in
+     1 ,ihole,ipoly,istream,ibub,rmine2,fracte

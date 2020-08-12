@@ -1,0 +1,11 @@
+K 10
+svn:ignore
+V 90
+email_to_beta_users
+output.f90
+output.f90.20120330
+solvediskvert.pro
+src_par
+src_gfortran
+
+END

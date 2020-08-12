@@ -1,0 +1,80 @@
+c	tts.txt
+
+       integer nxhst,nmu,nph,nfreq,nbnd,no,napmax,npeel
+
+c      note: nbnd is the same as nfilt in filt.txt!  make them equal!
+c       parameter(nxhst=149,nmu=20,nph=40,nfreq=150,nbnd=20
+       parameter(nxhst=149,nmu=20,nph=40,nfreq=100,nbnd=20
+     $ ,no=7,napmax=1,npeel=1)
+
+c    STANDARD SEDS
+
+      real*8 si(nfreq,nmu,nph,napmax,no)
+     1      ,sq(nfreq,nmu,nph,napmax,no)
+     1      ,su(nfreq,nmu,nph,napmax,no)
+     1      ,sv(nfreq,nmu,nph,napmax,no)
+     1      ,si2(nfreq,nmu,nph,napmax,no)
+     1      ,sq2(nfreq,nmu,nph,napmax,no)
+     1      ,su2(nfreq,nmu,nph,napmax,no)
+     1      ,sv2(nfreq,nmu,nph,napmax,no)
+     1      ,nums(nfreq,nmu,nph,napmax,no)
+     1      ,aveinc(nfreq,nmu,nph,napmax,no)
+
+c    PEELOFF SEDS AND IMAGES
+
+      real*8 thete_arr(npeel),phie_arr(npeel)
+      real*8 coste_arr(npeel),sinte_arr(npeel)
+      real*8 cospe_arr(npeel),sinpe_arr(npeel)
+
+      real*8 ti(nfreq,npeel,napmax,no)
+     1      ,tq(nfreq,npeel,napmax,no)
+     1      ,tu(nfreq,npeel,napmax,no)
+     1      ,tv(nfreq,npeel,napmax,no)
+     1      ,ti2(nfreq,npeel,napmax,no)
+     1      ,tq2(nfreq,npeel,napmax,no)
+     1      ,tu2(nfreq,npeel,napmax,no)
+     1      ,tv2(nfreq,npeel,napmax,no)
+     1      ,numt(nfreq,npeel,napmax,no)
+     1      ,tihst(nxhst,nxhst,nbnd),tqhst(nxhst,nxhst,nbnd)
+     1      ,tuhst(nxhst,nxhst,nbnd),tvhst(nxhst,nxhst,nbnd)
+
+      real*8 tauenv(nfreq,nmu,nph)
+
+      real*8 u(nmu),aperture2(napmax),rlam(4)
+     1 ,nscat,tot,zmax,rmax,a,c0,lp,abflux
+     1 ,rmin,rmind,rddust,z1,b,zmin,flux,xmaxp,rmind2
+     1 ,rsol,sflux,aflux,cosb,sinb,rmaxd,rmaxi,fractd
+     1 ,rpolbeam,dmu,dmuhalf,thetmu0,autors,rstar,wave
+     1 ,tstar,normstar,thete,phie,coste,sinte,cospe,sinpe
+     1 ,sfactor,fractxh,numax,numin,lnurat,nunorm
+     1 ,nurat,nub,accfrac,accfrac2,alphad,scount,dscount
+     1 ,tsub,tshock,rtrunc,fspot,mdotdisk,apmax,apmin,ltot
+     1 ,dthresh
+
+        integer np,npout
+     1 ,npsav,limb,occult,nfinei,nfined 
+     1 ,nri,nzi,iwrite,isot,itherm,ipeel,ispot,i_orig,idiskacc
+     1 ,ialpha,irminsub,izmin,iplanckst,nap,idiskwarp,idiskpuff
+
+      common /p1/ si,sq,su,sv
+     1 ,si2,sq2,su2,sv2,aveinc
+     1 ,tauenv
+     1 ,tihst,tqhst,tuhst,tvhst
+     1 ,ti,tq,tu,tv
+     1 ,ti2,tq2,tu2,tv2
+     1 ,coste_arr,cospe_arr,sinte_arr,sinpe_arr
+     1 ,thete_arr,phie_arr
+     1 ,u,aperture2,rlam
+     1 ,nscat,tot,zmax,rmax,a,c0,lp,abflux
+     1 ,rmin,rmind,rddust,z1,b,zmin,flux,xmaxp,rmind2
+     1 ,rsol,sflux,aflux,cosb,sinb,rmaxd,rmaxi,fractd
+     1 ,rpolbeam,dmu,dmuhalf,thetmu0,autors,rstar,wave
+     1 ,tstar,normstar,thete,phie,coste,sinte,cospe,sinpe
+     1 ,sfactor,fractxh,numax,numin,lnurat,nunorm
+     1 ,nurat,nub,accfrac,accfrac2,alphad,dscount,scount
+     1 ,tsub,tshock,rtrunc,fspot,mdotdisk,apmax,apmin
+     1 ,ltot,dthresh,nums,numt
+     1 ,np,npout,npsav,limb,occult,nfinei
+     1 ,nfined,nri,nzi,iwrite,isot,itherm,ipeel,ispot,i_orig
+     1 ,idiskacc,ialpha,irminsub,izmin,iplanckst,nap,idiskwarp,idiskpuff
+

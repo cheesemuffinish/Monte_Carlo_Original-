@@ -1,0 +1,4 @@
+      integer iseed,i1
+      common /ranparm/ iseed,i1
+
+c	iseed isn't used, but is needed to agree with random.com

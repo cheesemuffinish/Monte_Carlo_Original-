@@ -1,0 +1,24 @@
+c	grid.txt
+
+      integer nrg,ntg,npg
+      real*8 texp,rexp
+
+c	*****  set ntg to an odd number!!!!! *******
+c	will work on a fix later...
+
+      parameter(nrg=400,ntg=199,npg=1,rexp=3,texp=1.5)
+
+      real*8 densarr(nrg,ntg,npg),massarr(nrg,ntg,npg)
+     1 ,tdust(nrg,ntg,npg)
+     1 ,rarr(nrg),r2arr(nrg),thetarr(ntg),tmptharr(ntg)
+     1 ,sintarr(ntg)
+     1 ,costarr(ntg),tan2arr(ntg),phiarr(npg),aarr(npg)
+     1 ,barr(npg),tauarr(nrg)
+
+      integer nabs(nrg,ntg,npg)
+      logical diffus(nrg,ntg,npg)
+
+      common /gr/ densarr,massarr,tdust
+     1 ,rarr,r2arr,thetarr
+     1 ,tmptharr,sintarr
+     1 ,costarr,tan2arr,phiarr,aarr,barr,tauarr,nabs,diffus

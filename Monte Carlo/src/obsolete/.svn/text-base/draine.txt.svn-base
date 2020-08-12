@@ -1,0 +1,10 @@
+      integer ndraine,nemit
+      parameter(ndraine=1000,nemit=18)
+
+      real*8 pdf_d(nemit,ndraine),cdf_d(nemit,ndraine)
+     #    ,logcdf_d(nemit,ndraine)
+     #    ,freq_d(ndraine),logfreq_d(ndraine)
+     #    ,uratio_arr(nemit)
+
+      common /btd/ pdf_d,cdf_d,logcdf_d,freq_d,logfreq_d
+     $   ,uratio_arr

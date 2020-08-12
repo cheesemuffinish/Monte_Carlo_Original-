@@ -1,0 +1,31 @@
+c	grid.txt
+
+      integer nrg,ntg,npg
+      real*8 texp,rexp
+
+c	*****  set ntg to an odd number!!!!! *******
+c	will work on a fix later...
+
+       parameter(nrg=400,ntg=199,npg=120,rexp=3,texp=1.5)
+ctesting
+c       parameter(nrg=400,ntg=59,npg=60,rexp=3,texp=1.5)
+
+      real*8 densarr(nrg,ntg,npg),massarr(nrg,ntg,npg)
+     1 ,tdust(nrg,ntg,npg),dtauabs(nrg,ntg,npg),tdust2(nrg,ntg,npg)
+     1 ,rarr(nrg),r2arr(nrg),thetarr(ntg),tmptharr(ntg)
+     1 ,sintarr(ntg)
+     1 ,costarr(ntg),tan2arr(ntg),phiarr(npg),aarr(npg)
+     1 ,barr(npg),tauarr(nrg)
+     1 ,ravearr(nrg-1),thetavearr(ntg-1),phiavearr(npg-1)
+                                                                                
+      integer nabs(nrg,ntg,npg),diffdir(nrg,ntg,npg)
+     1 ,dustarr(nrg,ntg,npg),count_message,iwarn
+      logical diffus(nrg,ntg,npg),nodust(nrg,ntg,npg)
+
+      common /gr/ densarr,massarr,tdust,dtauabs,tdust2
+     1 ,rarr,r2arr,thetarr
+     1 ,tmptharr,sintarr
+     1 ,costarr,tan2arr,phiarr,aarr,barr,tauarr
+     1 ,ravearr,thetavearr,phiavearr,nabs
+     1 ,diffdir,dustarr,count_message,iwarn
+     1 ,diffus,nodust

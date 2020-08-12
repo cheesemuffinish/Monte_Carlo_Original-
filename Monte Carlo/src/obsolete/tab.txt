@@ -1,0 +1,14 @@
+       integer narr
+
+       parameter(narr=720)
+
+      real*8 tharr(narr),cosarr(narr),s11arr(narr,4),s12arr(narr,4),
+     $  s13arr(narr,4),s14arr(narr,4),s21arr(narr,4),s22arr(narr,4),
+     $  s23arr(narr,4),s24arr(narr,4),s31arr(narr,4),s32arr(narr,4)
+     $  ,s33arr(narr,4),s34arr(narr,4),s41arr(narr,4),s42arr(narr,4)
+     $  ,s43arr(narr,4),s44arr(narr,4),dct
+      integer nelems
+
+      common /p3/ tharr,cosarr,s11arr,s12arr,s13arr,s14arr,s21arr
+     $  ,s22arr,s23arr,s24arr,s31arr,s32arr
+     $  ,s33arr,s34arr,s41arr,s42arr,s43arr,s44arr,dct,nelems
